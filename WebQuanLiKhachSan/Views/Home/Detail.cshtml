@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "Layout";
+}
+<section class="hero">
+    <div class="container">
+        <h2 class="h2red">Chào mừng bạn đến với Khách Sạn Hương Lavender</h2>
+        <p>Điểm đến lý tưởng của bạn</p> <br>
+    </div>
+</section>
+
+<section class="rooms">
+    <div>
+        <h2>@ViewBag.RoomType</h2>
+        <div class="room">
+            <img src="~/img/room@(ViewBag.img).jpg" alt="Phòng đơn">
+            <p>Giá: $100/đêm</p>
+            <p> Phòng được thiết kế theo phong cách đơn giản cho những vị khách có lối sống giản dị và cho những gia đình có con nhỏ </p>
+            <a asp-controller="Home" asp-action="Index"> <btn class="btn">Quay về</btn></btn></a>
+        </div>
+    </div>
+</section>

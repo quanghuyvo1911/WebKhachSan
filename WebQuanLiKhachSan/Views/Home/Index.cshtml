@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "Layout";
+
+    string[] ListRoom = {
+        "Phòng Đơn",
+        "Phòng Đôi",
+        "Phòng 2 Giường Ngủ",
+        "Phòng Hạng Sang"
+    };
+}
+
+<section class="hero">
+    <div class="">
+        <h2 style="color: rgb(164, 123, 202);" class="h2red prevent-select">
+            Chào mừng bạn đến với Khách Sạn Hương
+            Lavender
+        </h2>
+        <p>Điểm đến lý tưởng của bạn</p>
+    </div>
+</section>
+
+<section class="rooms">
+    <h2>Các loại phòng của chúng tôi</h2>
+    <div class="container">
+
+        @for(int i = 0; i < ListRoom.Length; i++)
+        {
+            
+            <div class="room">
+                <img src="~/img/room@(i+1).jpg" alt="Phòng đơn">
+                <h3>@ListRoom[i]</h3>
+                <p>Giá: $100/đêm</p>
+                <a asp-controller="Home" asp-action="Detail" asp-route-RoomType=@ListRoom[i]>
+                    <btn class="btn">Đặt phòng</btn>
+                </a>
+            </div>
+        }
+
+
+    </div>
+</section>
